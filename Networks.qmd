@@ -1,0 +1,26 @@
+---
+title: "Olympic Podium Network"
+author: Edward Blaha
+format:
+  html: default
+  pdf: default
+execute:
+  echo: false
+  message: false
+  warning: false
+---
+
+```{r}
+#| include: false
+source("/Users/edwardblaha/DataWrangling/Networks/Networks/Networks.R")
+```
+## Olympic Medal Network
+
+The nodes in this network represent countries that have won medals at the Olympics. They are sized according to number of medals, and the edges represent appearing on the podium with other countries. Links are drawn when countries share a high weighted proportion of their medals with other countries rather than a high raw number to avoid over-plotting.  
+
+```{r}
+#| echo: false
+#| fig-cap: "Olympic co-medalling network, 1896–2016"
+
+knitr::include_graphics("olympic_network.png")
+```
